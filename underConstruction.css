@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Titles/Headers';
+    src: url(./resources/fonts/dexotick/Dexotick\ By\ Dhan\ Studio.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Symbol/Text';
+    src: url(./resources/fonts/kurland/Kurland.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Quotes/Secondary-Headers';
+    src: url(./resources/fonts/Qwitcher_Grypen/QwitcherGrypen-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Moons!';
+    src: url(./resources/fonts/moon_phases/moon_phases.ttf) format('truetype');
+}
+        /*Broad-Styles*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: black;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+h1 {
+    font-family: 'Titles/Headers';
+    color: whitesmoke;
+    font-size: 3.5rem;
+}
+
+.symbol {
+    font-family: 'Symbol/Text';
+    color: whitesmoke;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: 'Quotes/Secondary-Headers';
+    color: cyan;
+    font-size: 3rem;
+}
+
+h3, .menu a{
+    font-family: 'Titles/Headers';
+    color: rgb(0,155,155);
+    font-size: 4rem;
+}
+
+p {
+    font-family: 'Symbol/Text';
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+        /*Header*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    padding: 0rem 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 0px 0.5rem 0px gray;
+}
+    /*Logo - left of header*/
+header div.logo-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.sub-logo-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: -2rem;
+}
+div.sub-logo-container .symbol{
+    color: whitesmoke;
+    font-size: 3.5rem;
+}
+div.logo-container h2{
+    font-weight: 300;
+}
+    /*Menu - right of header*/
+header nav.menu ul{
+    display: flex;
+
+}
+nav.menu a {text-decoration: none;}
+nav.menu ul li {
+    margin: 0rem 1rem;
+}
+nav.menu ul li a {
+    font-size: 2rem;
+    transition-timing-function: ease;
+    transition: color 0.5s, font-size 0.5s;
+}
+nav.menu ul li a:hover {
+    color: cyan;
+    font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 768px){
+    html{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 480px){
+    html{
+        font-size: 6px;
+    }
+}
+        /*main*/
+main {
+    width: 100%;
+    height: 73rem;
+    padding: 7rem 0rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./resources/images/warning!.png);
+    background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        background-image: none;
+    }
+}
